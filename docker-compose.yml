@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  fastapi:
+    container_name: challenge-7-AI
+    build:
+      context: .
+      args:
+        VERBOSE: "true"
+    volumes:
+      - ./:/api
+    ports:
+      - "8000:8000"
